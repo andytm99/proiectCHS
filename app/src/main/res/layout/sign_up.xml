@@ -96,7 +96,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    tools:context=".RegisterUser">
 
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"
@@ -110,11 +111,11 @@
         <ImageView
             android:id="@+id/imageViewLogo"
             android:layout_width="wrap_content"
-            android:layout_height="72dp"
+            android:layout_height="121dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"
             android:layout_marginTop="6dp"
-            android:src="@drawable/logo" />
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/logo2" />
         <!-- //Logo -->
 
         <!-- Error handling -->
@@ -168,6 +169,26 @@
                     android:inputType="textEmailAddress" />
             </TableRow>
             <!-- //Email -->
+
+            <!-- password -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textViewPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password" />
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword" />
+            </TableRow>
+            <!-- //password -->
 
             <!-- Date of Birth -->
             <TableRow
@@ -422,6 +443,34 @@
             </TableRow>
             <!-- //Submit button -->
 
+
+            <!-- Back button -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" >
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blank"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/buttonBackSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back" />
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blank"
+                    android:layout_marginTop="12dp" />
+
+            </TableRow>
+            <!-- //Back button -->
 
 
         </TableLayout>
