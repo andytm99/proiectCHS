@@ -214,22 +214,25 @@
                         android:layout_height="match_parent" >
 
 
-                        <Spinner
+                        <EditText
                             android:id="@+id/spinnerDOBDay"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:ems="2"/>
 
 
-                        <Spinner
+                        <EditText
                             android:id="@+id/spinnerDOBMonth"
                             android:entries="@array/array_months"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:ems="2"/>
 
-                        <Spinner
+                        <EditText
                             android:id="@+id/spinnerDOBYear"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:ems="4"/>
                     </TableRow>
 
 
@@ -294,27 +297,27 @@
             </TableRow>
             <!-- //Gender -->
 
-            <!-- Mesurment -->
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="12dp" >
+<!--            &lt;!&ndash; Mesurment &ndash;&gt;-->
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="12dp" >-->
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mesurment" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textView8"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/mesurment" />-->
 
-                <Spinner
-                    android:id="@+id/spinnerMesurment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/array_mesurments" />
+<!--                <Spinner-->
+<!--                    android:id="@+id/spinnerMesurment"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:entries="@array/array_mesurments" />-->
 
 
-            </TableRow>
-            <!-- //Mesurment -->
+<!--            </TableRow>-->
+<!--            &lt;!&ndash; //Mesurment &ndash;&gt;-->
 
             <!-- Height -->
             <TableRow
