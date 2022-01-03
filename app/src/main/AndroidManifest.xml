@@ -16,7 +16,7 @@
 
 <!--        change android:name to start the app with different activity-->
 
-        <activity android:name=".CodeScannerActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
