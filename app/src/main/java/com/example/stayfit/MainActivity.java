@@ -15,6 +15,7 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
         private TextView register;
+        private TextView login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         register=(TextView) findViewById(R.id.register);
         register.setOnClickListener(this);
+
+        login=(TextView) findViewById(R.id.login);
+        login.setOnClickListener(this);
     }
 
     @Override
@@ -29,6 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.register:
                 startActivity(new Intent(this,RegisterUser.class ));
+                break;
+            case R.id.login:
+                startActivity(new Intent(this,LoginUser.class));
                 break;
         }
     }
