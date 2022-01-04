@@ -82,7 +82,7 @@ public class LoginUser extends AppCompatActivity implements View.OnClickListener
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    startActivity(new Intent(LoginUser.this,MainActivity.class));
+                    startActivity(new Intent(LoginUser.this,MainMenuActivity.class));
                 }
                 else
                 {

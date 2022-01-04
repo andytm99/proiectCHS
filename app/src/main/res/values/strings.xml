@@ -179,5 +179,7 @@
     <string name="login">LogIn</string>
     <string name="register">Register</string>
     <string name="applicationlogo">ApplicationLogo</string>
+    <string name="logout">logout</string>
+    <string name="history">food history</string>
 
 </resources>
