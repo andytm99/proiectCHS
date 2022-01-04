@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/drawable/ic_menu_action_add.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/drawable/ic_menu_add.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
@@ -11,7 +12,7 @@
         <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/layout/content_main.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/layout/edit_profile_goal.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/layout/edit_profile_goals.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/layout/sign_up.xml" value="0.22010869565217392" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/proiectCHS/app/src/main/res/layout/sign_up_goal.xml" value="0.264" />
       </map>
