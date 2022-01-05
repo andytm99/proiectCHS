@@ -188,23 +188,44 @@
 
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Barcode"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:ems="3" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/search" />
+
+        </TableRow>
+
     </TableLayout>
-
-    <Button
-        android:id="@+id/buttonScanTheBarCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Scan the bar code"
-
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="567dp" />
 
     <Button
         android:id="@+id/buttonAddFoodToDatabase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADD"
+        android:layout_marginTop="30dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="631dp" />
