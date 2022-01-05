@@ -8,14 +8,14 @@
     tools:context=".CodeScannerActivity">
 
     <com.budiyev.android.codescanner.CodeScannerView
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
         android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="645dp"
         app:autoFocusButtonColor="@android:color/white"
         app:autoFocusButtonVisible="true"
         app:flashButtonColor="@android:color/white"
         app:flashButtonVisible="true"
-        app:maskColor="#6C000000"/>
+        app:maskColor="#6C000000" />
     <TextView
         android:id="@+id/tv_textView"
         android:layout_width="wrap_content"
