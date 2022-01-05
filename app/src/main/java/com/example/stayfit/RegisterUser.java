@@ -25,7 +25,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
     private TextView back;
     private TextView sign;
     private FirebaseAuth mAuth;
-    private EditText editTextEmail, editTextPassword,editTextHeight,editTextWeight,yearSpinner,daySpinner,monthSpinner;
+    private EditText editTextEmail, editTextPassword,editTextHeight,editTextWeight,yearSpinner,daySpinner,monthSpinner,targetWeight;
     private Spinner activityLevel;
     private RadioGroup radioButtonGender;
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         daySpinner=(EditText)findViewById(R.id.spinnerDOBDay);
         monthSpinner=(EditText)findViewById(R.id.spinnerDOBMonth);
         radioButtonGender=(RadioGroup) findViewById(R.id.radioGroupGender);
+        targetWeight=(EditText)findViewById(R.id.editTextTargetWeight);
     }
 
     @Override
@@ -71,6 +72,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         String day=daySpinner.getText().toString().trim();
         String month=monthSpinner.getText().toString().trim();
         String year=yearSpinner.getText().toString().trim();
+        String tWeight=targetWeight.getText().toString().trim();
 
         if(email.isEmpty()){
             editTextEmail.setError("Email is required!");
@@ -119,6 +121,11 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             editTextWeight.requestFocus();
             return;
         }
+        if(tWeight.isEmpty()){
+            targetWeight.setError("Target weight is required!");
+            targetWeight.requestFocus();
+            return;
+        }
 
         mAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -126,7 +133,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            User user=new User(email,password,day,month,year,height,weight);
+                            User user=new User(email,password,day,month,year,height,weight,tWeight);
 
 
                             FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app").getReference("Users")
