@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="339dp"
+        android:layout_marginBottom="401dp"
         android:text="@string/profile" />
 
     <Button
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="294dp"
+        android:layout_marginBottom="339dp"
         android:text="@string/goal" />
 
     <Button
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="248dp"
+        android:layout_marginBottom="283dp"
         android:text="@string/food" />
 
     <Button
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="199dp"
+        android:layout_marginBottom="227dp"
         android:text="@string/history" />
 
 </RelativeLayout>

@@ -28,8 +28,8 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.appbar.AppBarLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_width="380dp"
+                    android:layout_height="match_parent">
 
                     <androidx.appcompat.widget.Toolbar
                         android:layout_width="280dp"
@@ -38,9 +38,9 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="47dp"
-                        android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp"
-                        app:srcCompat="@drawable/home"/>
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/home" />
 
                 </com.google.android.material.appbar.AppBarLayout>
 
@@ -67,7 +67,7 @@
                     android:id="@+id/editTextFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="3"
+                    android:ems="5"
                     android:inputType="textEmailAddress" />
 
                 <TextView
@@ -80,7 +80,7 @@
                     android:id="@+id/editTextSum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="3"
+                    android:ems="5"
                     android:inputType="textEmailAddress" />
 
             </TableRow>
@@ -128,6 +128,22 @@
         </TableLayout>
         <!-- //Breakfast -->
 
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="18dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ListView
+                    android:id="@+id/breakfastListView"
+                    android:layout_width="match_parent"
+                    />
+            </TableRow>
+        </TableLayout>
         <!-- Lunch -->
 
         <TableLayout
@@ -154,62 +170,78 @@
                     android:textSize="18sp" />
             </TableRow>
         </TableLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="18dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ListView
+                    android:id="@+id/lunchListView"
+                    android:layout_width="match_parent" />
+            </TableRow>
+        </TableLayout>
         <!-- //Lunch -->
 
         <!-- Before training -->
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="18dp">
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginBottom="18dp">-->
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" >-->
 
-                <ImageView
-                    android:id="@+id/imageViewAddBeforeTraining"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_menu_add"
-                    tools:ignore="VectorDrawableCompat" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageViewAddBeforeTraining"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:srcCompat="@drawable/ic_menu_add"-->
+<!--                    tools:ignore="VectorDrawableCompat" />-->
 
-                <TextView
-                    android:id="@+id/textViewHeadlineBeforeTraining"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/before_training"
-                    android:textSize="18sp" />
-            </TableRow>
-        </TableLayout>
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewHeadlineBeforeTraining"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/before_training"-->
+<!--                    android:textSize="18sp" />-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
         <!-- //Before training -->
 
         <!-- After training -->
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="18dp">
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginBottom="18dp">-->
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" >-->
 
-                <ImageView
-                    android:id="@+id/imageViewAddAfterTraining"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_menu_add"
-                    tools:ignore="VectorDrawableCompat" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageViewAddAfterTraining"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:srcCompat="@drawable/ic_menu_add"-->
+<!--                    tools:ignore="VectorDrawableCompat" />-->
 
-                <TextView
-                    android:id="@+id/textViewHeadlineAfterTraining"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/after_training"
-                    android:textSize="18sp" />
-            </TableRow>
-        </TableLayout>
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewHeadlineAfterTraining"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/after_training"-->
+<!--                    android:textSize="18sp" />-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
         <!-- //After training -->
 
         <!-- Dinner -->
@@ -240,6 +272,22 @@
         </TableLayout>
         <!-- //Dinner -->
 
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="18dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ListView
+                    android:id="@+id/dinnerListView"
+                    android:layout_width="match_parent" />
+            </TableRow>
+        </TableLayout>
+
         <!-- Snacks -->
 
         <TableLayout
@@ -266,9 +314,7 @@
                     android:textSize="18sp" />
             </TableRow>
         </TableLayout>
-        <!-- //Snacks -->
 
-        <!-- Supper -->
 
         <TableLayout
             android:layout_width="match_parent"
@@ -279,21 +325,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <ImageView
-                    android:id="@+id/imageViewAddSupper"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_menu_add"
-                    tools:ignore="VectorDrawableCompat" />
-
-                <TextView
-                    android:id="@+id/textViewHeadlineSupper"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/supper"
-                    android:textSize="18sp" />
+                <ListView
+                    android:id="@+id/snacksListView"
+                    android:layout_width="match_parent" />
             </TableRow>
         </TableLayout>
+        <!-- //Snacks -->
+
+        <!-- Supper -->
+
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginBottom="18dp">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" >-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageViewAddSupper"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:srcCompat="@drawable/ic_menu_add"-->
+<!--                    tools:ignore="VectorDrawableCompat" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewHeadlineSupper"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/supper"-->
+<!--                    android:textSize="18sp" />-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
         <!-- //Supper -->
 
 

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFoodActivity">
+
+
+    <EditText
+        android:id="@+id/editTextProductName"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="102dp"
+        android:ems="3" />
+
+    <EditText
+        android:id="@+id/editTextBrandNameAdd"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="313dp"
+        android:layout_marginEnd="103dp"
+        android:ems="3" />
+
+    <EditText
+        android:id="@+id/editTextCaloriesAdd"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="357dp"
+        android:layout_marginEnd="104dp"
+        android:ems="3" />
+
+    <EditText
+        android:id="@+id/editTextCarbsAdd"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="396dp"
+        android:layout_marginEnd="103dp"
+        android:ems="3" />
+
+    <EditText
+        android:id="@+id/editTextProteinsAdd"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="437dp"
+        android:layout_marginEnd="103dp"
+        android:ems="3" />
+
+    <EditText
+        android:id="@+id/editTextFatsAdd"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="102dp"
+        android:ems="3" />
+
+    <EditText
+        android:id="@+id/editTextBarcodeAdd"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="525dp"
+        android:layout_marginEnd="104dp"
+        android:ems="3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="162dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/logo2" />
+
+
+    <TextView
+        android:id="@+id/CategoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="229dp"
+        android:text="@string/category" />
+
+    <TextView
+        android:id="@+id/viewTextBrandName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="328dp"
+        android:text="Brand Name" />
+
+    <EditText
+        android:id="@+id/editTextCategoryName"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="102dp"
+        android:ems="3" />
+
+    <TextView
+        android:id="@+id/textViewCaloriesADD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="487dp"
+        android:text="Calories per 100g" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="448dp"
+        android:text="Carbs per 100g" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="410dp"
+        android:text="Proteins per 100g" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="371dp"
+        android:text="Fats per 100g" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginBottom="316dp"
+        android:text="@string/barcode" />
+
+    <Button
+        android:id="@+id/addButtonToDatabase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="132dp"
+        android:text="@string/add" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        android:text="@string/add_food_to_database"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textViewProductNameADD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="283dp"
+        android:text="Product Name" />
+
+    <ImageView
+        android:id="@+id/HomeButton"
+        android:layout_width="48dp"
+        android:layout_height="45dp"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="23dp"
+        android:layout_height="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="315dp"
+        app:srcCompat="@drawable/search" />
+</RelativeLayout>

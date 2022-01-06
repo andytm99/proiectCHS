@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         private TextView register;
         private TextView login;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         login=(TextView) findViewById(R.id.login);
         login.setOnClickListener(this);
+
+        mAuth = FirebaseAuth.getInstance();
+        if(mAuth.getCurrentUser()!=null)
+        {
+            startActivity(new Intent(MainActivity.this, MainMenuActivity.class));
+            //finish();
+        }
     }
 
     @Override

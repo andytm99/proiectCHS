@@ -181,5 +181,6 @@
     <string name="applicationlogo">ApplicationLogo</string>
     <string name="logout">logout</string>
     <string name="history">food history</string>
+    <string name="add_food_to_database">Add Food To Database</string>
 
 </resources>

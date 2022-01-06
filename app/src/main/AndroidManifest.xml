@@ -38,6 +38,11 @@
             android:name=".MainMenuActivity">
 
         </activity>
+
+        <activity
+            android:name=".AddFoodActivity">
+
+        </activity>
     </application>
 
 </manifest>
