@@ -74,28 +74,7 @@
         </TableRow>
 
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textViewCategory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/category"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editTextCategory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:ems="6" />
-
-        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -242,16 +221,40 @@
 
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blank"
+                 />
+            <Button
+                android:id="@+id/buttonAddFoodToDatabase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD"
+                android:layout_gravity="center" />
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blank"
+                />
+
+        </TableRow>
+
     </TableLayout>
 
-    <Button
-        android:id="@+id/buttonAddFoodToDatabase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADD"
-        android:layout_marginTop="30dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="631dp" />
+<!--    <Button-->
+<!--        android:id="@+id/buttonAddFoodToDatabase"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ADD"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="161dp"-->
+<!--        tools:layout_editor_absoluteY="631dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
