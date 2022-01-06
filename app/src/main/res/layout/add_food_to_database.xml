@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"/>
 
         <ImageView
+            android:id="@+id/backButtonAddToDatabase"
             android:layout_width="47dp"
             android:layout_height="46dp"
             android:layout_marginLeft="10dp"
@@ -64,12 +65,12 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextCategoryName"
+                android:id="@+id/editTextProductName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="80dp"
-                android:ems="3" />
+                android:ems="6" />
 
         </TableRow>
 
@@ -213,6 +214,7 @@
                 android:ems="3" />
 
             <ImageView
+                android:id="@+id/scanBarcodeButton"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="30dp"
@@ -235,7 +237,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ADD"
-                android:layout_gravity="center" />
+                android:layout_gravity="left" />
             <TextView
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"

@@ -45,7 +45,7 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
                 break;
 
             case R.id.homeButtonMenu:
-                //Waiting for home activity implementation
+                startActivity(new Intent(MainMenuActivity.this,AddFoodActivity.class));
                 break;
 
             case R.id.buttonProfileMenu:
