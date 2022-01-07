@@ -47,6 +47,10 @@
             android:name=".DiaryActivity">
 
         </activity>
+        <activity
+            android:name=".FoodActivity">
+
+        </activity>
     </application>
 
 </manifest>

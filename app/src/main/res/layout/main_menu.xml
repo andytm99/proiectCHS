@@ -35,7 +35,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="298dp"
-        android:text="@string/home" />
+        android:text="Diary" />
 
     <Button
         android:id="@+id/buttonProfileMenu"
@@ -71,6 +71,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="227dp"
-        android:text="@string/history" />
+        android:text="diary history" />
 
 </RelativeLayout>

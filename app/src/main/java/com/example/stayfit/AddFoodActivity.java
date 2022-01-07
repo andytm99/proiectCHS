@@ -57,7 +57,7 @@ public class AddFoodActivity extends AppCompatActivity implements View.OnClickLi
                 addFoodToDatabase();
                 break;
             case R.id.backButtonAddToDatabase:
-                startActivity(new Intent(this,MainMenuActivity.class ));// vom modifica sa duca spre FoodMenu
+                startActivity(new Intent(this,FoodActivity.class ));//FoodActivity este food menu
                 break;
             case R.id.scanBarcodeButton:
                 break;//aici o sa avem metoda ce o sa foloseasca barcode scannerul

@@ -58,7 +58,7 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
 
             case R.id.foodButtonMenu:
                 //waiting for food activity implementation
-                startActivity(new Intent(MainMenuActivity.this,AddFoodActivity.class));
+                startActivity(new Intent(MainMenuActivity.this,FoodActivity.class));
                 break;
 
             case R.id.foodHistoryButtonMenu:

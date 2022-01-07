@@ -35,13 +35,31 @@
                     <androidx.appcompat.widget.Toolbar
                         android:layout_width="280dp"
                         android:layout_height="0dp" />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                         <TableRow>
+                            <ImageView
+                                android:id="@+id/homeButtonDiary"
+                                android:layout_width="30dp"
+                                android:layout_height="47dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                app:srcCompat="@drawable/home" />
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="-42dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Food Diary"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="47dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        app:srcCompat="@drawable/home" />
+             </TableRow>
+
+        </TableLayout>
 
                 </com.google.android.material.appbar.AppBarLayout>
 
@@ -141,7 +159,7 @@
 
                 <ListView
                     android:id="@+id/breakfastListView"
-                    android:layout_width="365dp" />
+                    android:layout_width="wrap_content" />
             </TableRow>
         </TableLayout>
         <!-- Lunch -->
@@ -183,7 +201,7 @@
 
                 <ListView
                     android:id="@+id/lunchListView"
-                    android:layout_width="365dp" />
+                    android:layout_width="wrap_content" />
             </TableRow>
         </TableLayout>
         <!-- //Lunch -->
@@ -284,7 +302,7 @@
 
                 <ListView
                     android:id="@+id/dinnerListView"
-                    android:layout_width="365dp" />
+                    android:layout_width="wrap_content" />
             </TableRow>
         </TableLayout>
 
@@ -327,7 +345,7 @@
 
                 <ListView
                     android:id="@+id/snacksListView"
-                    android:layout_width="365dp" />
+                    android:layout_width="wrap_content" />
             </TableRow>
         </TableLayout>
         <!-- //Snacks -->
