@@ -55,6 +55,7 @@ public class AddFoodActivity extends AppCompatActivity implements View.OnClickLi
         switch(v.getId()){
             case R.id.buttonAddFoodToDatabase:
                 addFoodToDatabase();
+                startActivity(new Intent(this,FoodActivity.class ));
                 break;
             case R.id.backButtonAddToDatabase:
                 startActivity(new Intent(this,FoodActivity.class ));//FoodActivity este food menu
