@@ -43,6 +43,10 @@
             android:name=".AddFoodActivity">
 
         </activity>
+        <activity
+            android:name=".DiaryActivity">
+
+        </activity>
     </application>
 
 </manifest>

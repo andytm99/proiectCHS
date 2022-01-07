@@ -7,17 +7,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AddFoodActivity extends AppCompatActivity implements View.OnClickListener {
     private Button buttonAdd;
     private EditText productName,brandName,calories,carbs,proteins,fats,barcode;
-    private FirebaseAuth mAuth;
     private ImageView backButton,barcodeScannerButton;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,7 +39,7 @@ public class AddFoodActivity extends AppCompatActivity implements View.OnClickLi
         barcodeScannerButton=(ImageView)findViewById(R.id.scanBarcodeButton);
         barcodeScannerButton.setOnClickListener(this);
 
-        mAuth = FirebaseAuth.getInstance();
+        databaseReference= FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app").getReference().child("Foods");
 
         productName=(EditText)findViewById(R.id.editTextProductName);
         brandName=(EditText)findViewById(R.id.editTextBrandName);
@@ -51,7 +57,7 @@ public class AddFoodActivity extends AppCompatActivity implements View.OnClickLi
                 addFoodToDatabase();
                 break;
             case R.id.backButtonAddToDatabase:
-                startActivity(new Intent(this,MainMenuActivity.class ));// vom modifica sa duca spre activitatea jurnalului
+                startActivity(new Intent(this,MainMenuActivity.class ));// vom modifica sa duca spre FoodMenu
                 break;
             case R.id.scanBarcodeButton:
                 break;//aici o sa avem metoda ce o sa foloseasca barcode scannerul
@@ -85,26 +91,48 @@ public class AddFoodActivity extends AppCompatActivity implements View.OnClickLi
         {
             calories.setError("Calories are missing!");
             calories.requestFocus();
+            return;
         }
         if(carbo.isEmpty())
         {
             carbs.setError("Carbs are required!");
             carbs.requestFocus();
+            return;
         }
         if(proteine.isEmpty())
         {
             proteins.setError("Proteins are required!");
             proteins.requestFocus();
+            return;
         }
         if(grasimi.isEmpty())
         {
             fats.setError("Fats are required!");
             fats.requestFocus();
+            return;
         }
         if(codBare.isEmpty())
         {
             barcode.setError("Barcode is required!");
             barcode.requestFocus();
+            return;
         }
+
+        Food foods=new Food(product,brand,calorii,carbo,grasimi,proteine,codBare);
+        databaseReference.push().setValue(foods).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                {
+                    Toast.makeText(AddFoodActivity.this,"Food inserted successfully into the database!",Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(),MainMenuActivity.class));
+                }
+                else{
+                    Toast.makeText(AddFoodActivity.this,"Food failed insertion into the database!",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
     }
 }

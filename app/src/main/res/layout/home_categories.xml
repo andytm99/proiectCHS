@@ -6,7 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    tools:context=".DiaryActivity">
 
 
 
@@ -61,7 +62,7 @@
                     android:id="@+id/textViewFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/food" />
+                    android:text="@string/target" />
 
                 <EditText
                     android:id="@+id/editTextFood"
@@ -140,8 +141,7 @@
 
                 <ListView
                     android:id="@+id/breakfastListView"
-                    android:layout_width="match_parent"
-                    />
+                    android:layout_width="365dp" />
             </TableRow>
         </TableLayout>
         <!-- Lunch -->
@@ -183,7 +183,7 @@
 
                 <ListView
                     android:id="@+id/lunchListView"
-                    android:layout_width="match_parent" />
+                    android:layout_width="365dp" />
             </TableRow>
         </TableLayout>
         <!-- //Lunch -->
@@ -284,7 +284,7 @@
 
                 <ListView
                     android:id="@+id/dinnerListView"
-                    android:layout_width="match_parent" />
+                    android:layout_width="365dp" />
             </TableRow>
         </TableLayout>
 
@@ -327,7 +327,7 @@
 
                 <ListView
                     android:id="@+id/snacksListView"
-                    android:layout_width="match_parent" />
+                    android:layout_width="365dp" />
             </TableRow>
         </TableLayout>
         <!-- //Snacks -->

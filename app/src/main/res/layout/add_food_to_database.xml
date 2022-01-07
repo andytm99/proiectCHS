@@ -119,7 +119,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:ems="3" />
+                android:ems="3"
+                android:inputType="number"/>
 
         </TableRow>
 
@@ -142,7 +143,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:ems="3" />
+                android:ems="3"
+                android:inputType="number"/>
 
         </TableRow>
 
@@ -165,7 +167,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:ems="3" />
+                android:ems="3"
+                android:inputType="number"/>
 
         </TableRow>
 
@@ -188,7 +191,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:ems="3" />
+                android:ems="3"
+                android:inputType="number"/>
 
         </TableRow>
 
