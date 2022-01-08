@@ -59,6 +59,11 @@
             android:name=".CalendarMain">
 
         </activity>
+
+        <activity
+            android:name=".SearchFoodActivity">
+
+        </activity>
     </application>
 
 </manifest>
