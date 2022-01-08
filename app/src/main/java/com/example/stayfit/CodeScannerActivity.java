@@ -32,7 +32,7 @@ public class CodeScannerActivity extends AppCompatActivity {
                         Intent intent=new Intent(CodeScannerActivity.this,AddFoodActivity.class);
                         intent.putExtra("Camera",result.getText().toString().trim());
                         startActivity(intent);
-                        Toast.makeText(CodeScannerActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(CodeScannerActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
             }
