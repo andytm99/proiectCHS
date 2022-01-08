@@ -56,11 +56,42 @@
             android:layout_height="135dp">
 
             <TextView
+                android:id="@+id/textViewBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="80dp"
+                android:text="Barcode"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="80dp"
+                android:ems="3" />
+
+            <ImageView
+                android:id="@+id/scanBarcodeButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/barcode" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="135dp">
+
+            <TextView
                 android:id="@+id/textViewProductName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="20dp"
                 android:text="Product Name"
                 android:textSize="20sp" />
 
@@ -69,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="20dp"
                 android:ems="6" />
 
         </TableRow>
@@ -196,36 +227,36 @@
 
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+<!--        <TableRow-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
 
-            <TextView
-                android:id="@+id/textViewBarcode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:text="Barcode"
-                android:textSize="20sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/textViewBarcode"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:text="Barcode"-->
+<!--                android:textSize="20sp" />-->
 
-            <EditText
-                android:id="@+id/editTextBarcode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:ems="3" />
+<!--            <EditText-->
+<!--                android:id="@+id/editTextBarcode"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:ems="3" />-->
 
-            <ImageView
-                android:id="@+id/scanBarcodeButton"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="20dp"
-                app:srcCompat="@drawable/barcode" />
+<!--            <ImageView-->
+<!--                android:id="@+id/scanBarcodeButton"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                app:srcCompat="@drawable/barcode" />-->
 
-        </TableRow>
+<!--        </TableRow>-->
 
         <TableRow
             android:layout_width="match_parent"

@@ -63,7 +63,7 @@ public class AddFoodActivity extends AppCompatActivity implements View.OnClickLi
         switch(v.getId()){
             case R.id.buttonAddFoodToDatabase:
                 addFoodToDatabase();
-                startActivity(new Intent(this,FoodActivity.class ));
+//                startActivity(new Intent(this,FoodActivity.class ));
                 break;
             case R.id.backButtonAddToDatabase:
                 startActivity(new Intent(this,FoodActivity.class ));//FoodActivity este food menu
@@ -84,6 +84,12 @@ public class AddFoodActivity extends AppCompatActivity implements View.OnClickLi
         String grasimi=fats.getText().toString().trim();
         String codBare=barcode.getText().toString().trim();
 
+        if(codBare.isEmpty())
+        {
+            barcode.setError("Barcode is required!");
+            barcode.requestFocus();
+            return;
+        }
         if(product.isEmpty())
         {
             productName.setError("Product name missing!");
@@ -121,12 +127,7 @@ public class AddFoodActivity extends AppCompatActivity implements View.OnClickLi
             fats.requestFocus();
             return;
         }
-        if(codBare.isEmpty())
-        {
-            barcode.setError("Barcode is required!");
-            barcode.requestFocus();
-            return;
-        }
+
 
         Food foods=new Food(product,brand,calorii,carbo,grasimi,proteine,codBare);
         databaseReference.push().setValue(foods).addOnCompleteListener(new OnCompleteListener<Void>() {
