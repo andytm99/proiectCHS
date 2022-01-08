@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:padding="30dp"
     tools:context=".CalendarMain">
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,27 +38,25 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateTIL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/dateTIL"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerInParent="true">
 
         <EditText
+            android:id="@+id/dateFormat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Date"
-            android:id="@+id/dateFormat"
             android:inputType="date"/>
-
-        <Button
-            android:id="@+id/buttonSearchFoodHistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Search"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Button
+        android:id="@+id/buttonSearchFoodHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:text="Search" />
 </RelativeLayout>
