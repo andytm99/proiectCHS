@@ -66,7 +66,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextBarcode"
+                android:id="@+id/editTextBarcodeBarcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -97,7 +97,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextProductName"
+                android:id="@+id/editTextQuantityBarcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -112,6 +112,28 @@
                 android:textSize="20sp" />
 
         </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="135dp">
+
+            <TextView
+                android:id="@+id/textViewCategoryBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Category:"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextCategoryBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:ems="6" />
+
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -123,7 +145,7 @@
                 android:text="@string/blank"
                 />
             <Button
-                android:id="@+id/buttonAddFoodDiaryToDatabase"
+                android:id="@+id/buttonAddFoodDiaryToDatabaseBarcode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ADD"
@@ -136,6 +158,8 @@
                 />
 
         </TableRow>
+
+
 
     </TableLayout>
 

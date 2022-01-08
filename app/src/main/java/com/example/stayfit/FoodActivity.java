@@ -44,7 +44,6 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
         foodListView=(ListView)findViewById(R.id.foodListView);
         database=FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app");
         databaseReference=database.getReference().child("Foods");
-        //DatabaseReference foodRef=databaseReference.child("Foods");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -64,28 +63,6 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         });
-
-
-       /* ValueEventListener eventListener=new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                foodListViewArrayList=new ArrayList<>();
-                for(DataSnapshot ds:snapshot.getChildren()){
-                    foodShowcase=ds.getValue(FoodShowcase.class);
-                    foodListViewArrayList.add(foodShowcase);
-                }
-                //adapter.notifyDataSetChanged();
-                FoodListAdapter adapter= new FoodListAdapter(FoodActivity.this,R.layout.adapter_food_view,foodListViewArrayList);
-                foodListView.setAdapter(adapter);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        };*/
-
-
 
 
     }
