@@ -12,10 +12,10 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class FoodListAdapter extends ArrayAdapter<FoodShowcase> {
+public class FoodListAdapter extends ArrayAdapter<Food> {
     private Context mContext;
     int mResource;
-    public FoodListAdapter(@NonNull Context context, int resource, @NonNull ArrayList<FoodShowcase> objects) {
+    public FoodListAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Food> objects) {
         super(context, resource, objects);
         mContext=context;
         mResource=resource;
@@ -24,11 +24,15 @@ public class FoodListAdapter extends ArrayAdapter<FoodShowcase> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        String name=getItem(position).getName();
+        String name=getItem(position).getFoodName();
         String brandName=getItem(position).getBrandName();
         String barCode=getItem(position).getBarcode();
+        String calories=getItem(position).getCalories();
+        String carbs=getItem(position).getCarbs();
+        String fats=getItem(position).getFats();
+        String proteins=getItem(position).getProteins();
 
-        FoodShowcase food=new FoodShowcase(name,brandName,barCode);
+        Food food=new Food(name,brandName,calories,carbs,fats,proteins,barCode);
         LayoutInflater inflater =LayoutInflater.from(mContext);
         convertView=inflater.inflate(mResource,parent,false);
 

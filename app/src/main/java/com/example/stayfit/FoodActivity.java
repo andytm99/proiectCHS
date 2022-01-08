@@ -26,8 +26,10 @@ import java.util.ArrayList;
 public class FoodActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView homeButton,addButton;
     private ListView foodListView;
-    private ArrayList<FoodShowcase> foodListViewArrayList=new ArrayList<>();
+    private ArrayList<Food> foodListViewArrayList=new ArrayList<>();
     private DatabaseReference databaseReference;
+    private FirebaseDatabase database;
+    protected Food food;
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.food_screen);
@@ -40,27 +42,48 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
 
 
         foodListView=(ListView)findViewById(R.id.foodListView);
-
-        databaseReference=FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app").getReference();
-        DatabaseReference foodRef=databaseReference.child("Foods");
-
-        FoodListAdapter adapter= new FoodListAdapter(this,R.layout.adapter_food_view,foodListViewArrayList);
-        foodListView.setAdapter(adapter);
-        ValueEventListener eventListener=new ValueEventListener() {
+        database=FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app");
+        databaseReference=database.getReference().child("Foods");
+        //DatabaseReference foodRef=databaseReference.child("Foods");
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                foodListViewArrayList=new ArrayList<>();
-                for(DataSnapshot ds:snapshot.getChildren()){
 
+                for(DataSnapshot ds:snapshot.getChildren()){
+                    food=ds.getValue(Food.class);
+                    foodListViewArrayList.add(food);
                 }
-                //adapter.notifyDataSetChanged();
+                FoodListAdapter adapter= new FoodListAdapter(FoodActivity.this,R.layout.adapter_food_view,foodListViewArrayList);
+                foodListView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
+
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        };
+        });
+
+
+       /* ValueEventListener eventListener=new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                foodListViewArrayList=new ArrayList<>();
+                for(DataSnapshot ds:snapshot.getChildren()){
+                    foodShowcase=ds.getValue(FoodShowcase.class);
+                    foodListViewArrayList.add(foodShowcase);
+                }
+                //adapter.notifyDataSetChanged();
+                FoodListAdapter adapter= new FoodListAdapter(FoodActivity.this,R.layout.adapter_food_view,foodListViewArrayList);
+                foodListView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        };*/
 
 
 

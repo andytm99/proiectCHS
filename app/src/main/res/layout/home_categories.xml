@@ -159,7 +159,8 @@
 
                 <ListView
                     android:id="@+id/breakfastListView"
-                    android:layout_width="wrap_content" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"/>
             </TableRow>
         </TableLayout>
         <!-- Lunch -->
@@ -201,7 +202,8 @@
 
                 <ListView
                     android:id="@+id/lunchListView"
-                    android:layout_width="wrap_content" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"/>
             </TableRow>
         </TableLayout>
         <!-- //Lunch -->
@@ -302,7 +304,8 @@
 
                 <ListView
                     android:id="@+id/dinnerListView"
-                    android:layout_width="wrap_content" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"/>
             </TableRow>
         </TableLayout>
 
@@ -345,7 +348,8 @@
 
                 <ListView
                     android:id="@+id/snacksListView"
-                    android:layout_width="wrap_content" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"/>
             </TableRow>
         </TableLayout>
         <!-- //Snacks -->
