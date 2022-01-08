@@ -26,7 +26,7 @@ import java.util.Calendar;
 import java.util.TimeZone;
 
 public class SearchFoodBarcodeActivity extends AppCompatActivity implements View.OnClickListener {
-    private ImageView backButton;
+    private ImageView backButton,scanner;
     private EditText barcode,quantity,category;
     private Button addButton;
     protected Food food;
@@ -42,6 +42,9 @@ public class SearchFoodBarcodeActivity extends AppCompatActivity implements View
 
         addButton=(Button)findViewById(R.id.buttonAddFoodDiaryToDatabaseBarcode);
         addButton.setOnClickListener(this);
+
+        scanner=(ImageView)findViewById(R.id.scanBarcodeButtonSearch) ;
+        scanner.setOnClickListener(this);
 
         barcode =(EditText)findViewById(R.id.editTextBarcodeBarcode);
         quantity=(EditText)findViewById(R.id.editTextQuantityBarcode) ;
@@ -63,6 +66,9 @@ public class SearchFoodBarcodeActivity extends AppCompatActivity implements View
         switch(v.getId()){
             case R.id.backButtonSearchBarcode:
                 startActivity(new Intent(this,SearchFoodActivity.class));
+                break;
+            case R.id.scanBarcodeButtonSearch:
+                startActivity(new Intent(this,CodeScannerDiaryActivity.class));
                 break;
             case R.id.buttonAddFoodDiaryToDatabaseBarcode:
                 addFoodToDiaryDatabase();

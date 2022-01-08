@@ -73,6 +73,11 @@
             android:name=".SearchFoodBarcodeActivity">
 
         </activity>
+        <activity
+            android:name=".CodeScannerDiaryActivity">
+
+        </activity>
+
     </application>
 
 </manifest>
