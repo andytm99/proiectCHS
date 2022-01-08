@@ -22,7 +22,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="-50dp"
-            app:srcCompat="@drawable/home"/>
+            app:srcCompat="@drawable/back"/>
 
         <TextView
             android:layout_width="wrap_content"
