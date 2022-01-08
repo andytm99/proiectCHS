@@ -48,6 +48,14 @@ public class AddFoodActivity extends AppCompatActivity implements View.OnClickLi
         proteins=(EditText)findViewById(R.id.editTextProteins);
         fats=(EditText)findViewById(R.id.editTextFat);
         barcode=(EditText)findViewById(R.id.editTextBarcode);
+        String codBareSmech;
+        Bundle bundle=getIntent().getExtras();
+        if(bundle!=null) {
+            codBareSmech = bundle.getString("Camera");
+            if (codBareSmech != null) {
+                barcode.setText(codBareSmech);
+            }
+        }
     }
 
     @Override
@@ -61,7 +69,8 @@ public class AddFoodActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(new Intent(this,FoodActivity.class ));//FoodActivity este food menu
                 break;
             case R.id.scanBarcodeButton:
-                break;//aici o sa avem metoda ce o sa foloseasca barcode scannerul
+                startActivity(new Intent(this,CodeScannerActivity.class));
+                break;
 
         }
     }

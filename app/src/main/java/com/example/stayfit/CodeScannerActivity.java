@@ -1,5 +1,6 @@
 package com.example.stayfit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -28,6 +29,9 @@ public class CodeScannerActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        Intent intent=new Intent(CodeScannerActivity.this,AddFoodActivity.class);
+                        intent.putExtra("Camera",result.getText().toString().trim());
+                        startActivity(intent);
                         Toast.makeText(CodeScannerActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });

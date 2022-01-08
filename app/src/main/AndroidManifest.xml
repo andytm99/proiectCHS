@@ -51,6 +51,10 @@
             android:name=".FoodActivity">
 
         </activity>
+        <activity
+            android:name=".CodeScannerActivity">
+
+        </activity>
     </application>
 
 </manifest>
