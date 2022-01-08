@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"/>
 
         <ImageView
-            android:id="@+id/backButtonAddToDatabase"
+            android:id="@+id/backButtonViewHistory"
             android:layout_width="47dp"
             android:layout_height="46dp"
             android:layout_marginLeft="10dp"
