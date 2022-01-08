@@ -62,7 +62,7 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
                 break;
 
             case R.id.foodHistoryButtonMenu:
-                //waiting for food history activity implementation
+                startActivity(new Intent(MainMenuActivity.this,CalendarMain.class));
                 break;
         }
 
