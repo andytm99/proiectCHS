@@ -64,6 +64,15 @@
             android:name=".SearchFoodActivity">
 
         </activity>
+
+        <activity
+            android:name=".SearchFoodNameActivity">
+
+        </activity>
+        <activity
+            android:name=".SearchFoodBarcodeActivity">
+
+        </activity>
     </application>
 
 </manifest>

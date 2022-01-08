@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".SearchFoodBarcodeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
             android:layout_height="wrap_content"/>
 
         <ImageView
-            android:id="@+id/backButtonAddToDatabase"
+            android:id="@+id/backButtonSearchName"
             android:layout_width="47dp"
             android:layout_height="46dp"
             android:layout_marginLeft="10dp"
@@ -56,29 +57,21 @@
             android:layout_height="135dp">
 
             <TextView
-                android:id="@+id/textViewBarcode"
+                android:id="@+id/textViewProductNameSearch"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="80dp"
-                android:text="Barcode"
+                android:text="Product Name"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextBarcode"
+                android:id="@+id/editTextProductNameSearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="80dp"
-                android:ems="3" />
-
-            <ImageView
-                android:id="@+id/scanBarcodeButtonSearch"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginLeft="20dp"
-                app:srcCompat="@drawable/barcode" />
+                android:ems="6" />
 
         </TableRow>
 
@@ -122,11 +115,11 @@
                 android:text="@string/blank"
                 />
             <Button
-                android:id="@+id/buttonAddFoodDiaryToDatabase"
+                android:id="@+id/buttonAddFoodToDatabase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ADD"
-                android:layout_gravity="center" />
+                android:layout_gravity="left" />
             <TextView
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"

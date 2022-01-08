@@ -38,13 +38,13 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
+        android:id="@+id/tv_scan_code"
         android:layout_width="1000dp"
         android:layout_height="200dp"
         android:layout_marginTop="70dp"
         app:srcCompat="@drawable/barcode" />
 
     <TextView
-        android:id="@+id/tv_scan_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
@@ -55,13 +55,13 @@
         android:textColor="@android:color/black" />
 
     <ImageView
+        android:id="@+id/tv_search"
         android:layout_width="4000dp"
         android:layout_height="200dp"
         android:layout_marginTop="310dp"
         app:srcCompat="@drawable/search" />
 
     <TextView
-        android:id="@+id/tv_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="170dp"
