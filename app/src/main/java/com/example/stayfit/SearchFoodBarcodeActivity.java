@@ -98,7 +98,7 @@ public class SearchFoodBarcodeActivity extends AppCompatActivity implements View
 
         if(categorie.isEmpty())
         {
-            category.setError("Category isrequired!");
+            category.setError("Category is required!");
             category.requestFocus();
             return;
         }
@@ -164,10 +164,8 @@ public class SearchFoodBarcodeActivity extends AppCompatActivity implements View
 
 
 
-
-
-
                     }
+                    Toast.makeText(SearchFoodBarcodeActivity.this,"No food with that bar code!",Toast.LENGTH_LONG).show();
                 }
 
             }
