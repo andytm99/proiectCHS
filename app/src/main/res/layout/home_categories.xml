@@ -74,33 +74,37 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                >
 
                 <TextView
                     android:id="@+id/textViewFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/target" />
+                    android:layout_marginStart="50dp"
+                    android:text="Target:" />
 
-                <EditText
-                    android:id="@+id/editTextFood"
+                <TextView
+                    android:id="@+id/editTextFoodTargetCalorii"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="5"
-                    android:inputType="textEmailAddress" />
+                    android:text="CaloriiTarget"/>
 
                 <TextView
                     android:id="@+id/textViewSum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/sum" />
+                    android:layout_marginStart="30dp"
+                    android:text="Sum:" />
 
-                <EditText
-                    android:id="@+id/editTextSum"
+                <TextView
+                    android:id="@+id/editTextSumCalorii"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="5"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:text="CaloriiSum"/>
 
             </TableRow>
         </TableLayout>

@@ -29,9 +29,11 @@ import java.util.TimeZone;
 public class DiaryActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView homeButton,breakfastAdd,lunchAdd,dinnerAdd,snacksAdd;
     private ListView breakfastLV,lunchLV,dinnerLV,snacksLV;
-    private DatabaseReference databaseReference;
+    private DatabaseReference databaseReference,databaseReferenceUsers;
     private FirebaseDatabase database;
     protected FoodDiary foodDiary;
+    protected User userApp;
+    private TextView tvTarget,tvSum;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         ArrayList<FoodDiary> breakfastLVArrayList=new ArrayList<>();
@@ -57,6 +59,9 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
         snacksAdd=(ImageView) findViewById(R.id.imageViewAddSnacks);
         snacksAdd.setOnClickListener(this);
 
+        tvTarget=(TextView)findViewById(R.id.editTextFoodTargetCalorii);
+        tvSum=(TextView)findViewById(R.id.editTextSumCalorii);
+
         breakfastLV=(ListView)findViewById(R.id.breakfastListView);
         lunchLV=(ListView)findViewById(R.id.lunchListView);
         dinnerLV=(ListView)findViewById(R.id.dinnerListView);
@@ -71,6 +76,9 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                int sumaCalorii=0;
+                int calorii=0;
+                float fCalorii=0;
                 for(DataSnapshot ds:snapshot.getChildren())
                 {
                     Calendar calendar=Calendar.getInstance(TimeZone.getDefault());
@@ -84,18 +92,30 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
                     if((foodDiary.getCategory().equals("Breakfast"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))&&(foodDiary.getEmail().equals(userEmail)))
                     {
                         breakfastLVArrayList.add(foodDiary);
+                        fCalorii=Float.parseFloat(foodDiary.getCalories());
+                        calorii=(int) fCalorii;
+                        sumaCalorii=sumaCalorii+calorii;
                     }
                     else
                         if((foodDiary.getCategory().equals("Lunch"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))&&(foodDiary.getEmail().equals(userEmail))){
                             lunchLVArrayList.add(foodDiary);
+                            fCalorii=Float.parseFloat(foodDiary.getCalories());
+                            calorii=(int) fCalorii;
+                            sumaCalorii=sumaCalorii+calorii;
                         }
                         else
                             if((foodDiary.getCategory().equals("Dinner"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))&&(foodDiary.getEmail().equals(userEmail))){
                                 dinnerLVArrayList.add(foodDiary);
+                                fCalorii=Float.parseFloat(foodDiary.getCalories());
+                                calorii=(int) fCalorii;
+                                sumaCalorii=sumaCalorii+calorii;
                             }
                             else
                                 if((foodDiary.getCategory().equals("Snacks"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))&&(foodDiary.getEmail().equals(userEmail))){
                                     snacksLVArrayList.add(foodDiary);
+                                    fCalorii=Float.parseFloat(foodDiary.getCalories());
+                                    calorii=(int) fCalorii;
+                                    sumaCalorii=sumaCalorii+calorii;
                                 }
                 }
 
@@ -115,6 +135,9 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
                 snacksLV.setAdapter(adapterSnacks);
                 adapterSnacks.notifyDataSetChanged();
 
+                String strSumaCalorii=String.valueOf(sumaCalorii);
+                tvSum.setText(strSumaCalorii);
+
 
             }
 
@@ -123,6 +146,35 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
 
             }
         });
+//pentru calcularea targetului de calorii
+            databaseReferenceUsers=database.getReference().child("Users");
+            databaseReferenceUsers.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for(DataSnapshot ds:snapshot.getChildren()) {
+                        userApp=ds.getValue(User.class);
+                        if(userApp.getEmail().equals(userEmail)){
+                            double BMR;
+                            Calendar calendar=Calendar.getInstance(TimeZone.getDefault());
+                            int year=calendar.get(Calendar.YEAR);
+                            int iInaltime=Integer.parseInt(userApp.getHeight());
+                            int iGreutate=Integer.parseInt(userApp.getWeight());
+                            int iVarsta=year - Integer.parseInt(userApp.getYear());
+                            BMR=88.362+(13.397*iGreutate)+(4.799*iInaltime)+(5.677*iVarsta);
+                            double caloriiTarget=BMR*1.2;
+                            int iCaloriiTarget=(int)caloriiTarget;
+                            String strCaloriiTarget=String.valueOf(iCaloriiTarget);
+                            tvTarget.setText(strCaloriiTarget);
+                        }
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
 
                 }
     }
