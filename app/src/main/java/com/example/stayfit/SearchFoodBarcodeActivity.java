@@ -113,11 +113,12 @@ public class SearchFoodBarcodeActivity extends AppCompatActivity implements View
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+                int ok=0;
                 for(DataSnapshot ds:snapshot.getChildren()){
                     food=ds.getValue(Food.class);
                     if(food.getBarcode().equals(codBare))
                     {
+                        ok=1;
                         Calendar calendar=Calendar.getInstance(TimeZone.getDefault());
                         int day=calendar.get(Calendar.DATE);
                         int month=calendar.get(Calendar.MONTH)+1;
@@ -146,7 +147,7 @@ public class SearchFoodBarcodeActivity extends AppCompatActivity implements View
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                         if (user != null) {
                             String userEmail = user.getEmail();
-                            FoodDiary foodDiary=new FoodDiary(userEmail,strDay,strMonth,strYear,cantitate,nume,categorie,numeBrand,caloriiJurnal,carboJurnal,grasimiJurnal,proteineJurnal,codDeBare);
+                            FoodDiary foodDiary=new FoodDiary(userEmail,strDay,strMonth,strYear,cantitate,nume,categorie,numeBrand,caloriiJurnal,carboJurnal,grasimiJurnal,proteineJurnal,codBare);
                             databaseReferenceDiary.push().setValue(foodDiary).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
@@ -165,7 +166,10 @@ public class SearchFoodBarcodeActivity extends AppCompatActivity implements View
 
 
                     }
-                    Toast.makeText(SearchFoodBarcodeActivity.this,"No food with that bar code!",Toast.LENGTH_LONG).show();
+
+                }
+                if(ok==0) {
+                    Toast.makeText(SearchFoodBarcodeActivity.this, "No food with that bar code!", Toast.LENGTH_LONG).show();
                 }
 
             }
