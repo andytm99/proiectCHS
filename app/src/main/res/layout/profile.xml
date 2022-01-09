@@ -41,11 +41,12 @@
                     android:layout_height="wrap_content"
                     android:text="@string/email" />
 
-                <EditText
+                <TextView
                     android:id="@+id/editTextEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:layout_marginLeft="15dp"
                     android:inputType="textEmailAddress" />
             </TableRow>
             <!-- //Email -->
@@ -73,25 +74,29 @@
                         android:layout_height="match_parent" >
 
 
-                        <EditText
+                        <TextView
                             android:id="@+id/spinnerDOBDay"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ems="2"/>
+                            android:ems="3"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"/>
 
 
-                        <EditText
+                        <TextView
                             android:id="@+id/spinnerDOBMonth"
                             android:entries="@array/array_months"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ems="2"/>
+                            android:ems="2"
+                            android:layout_marginTop="5dp"/>
 
-                        <EditText
+                        <TextView
                             android:id="@+id/spinnerDOBYear"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ems="4"/>
+                            android:ems="4"
+                            android:layout_marginTop="5dp"/>
                     </TableRow>
 
                 </TableLayout>
@@ -120,18 +125,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" >
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editTextHeightCm"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="3"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="11dp"/>
 
                         <TextView
                             android:id="@+id/textViewCm"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/cm" />
+                            android:text="@string/cm"
+                            android:layout_marginTop="11dp"/>
                     </TableRow>
                 </TableLayout>
             </TableRow>
@@ -158,18 +166,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" >
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editTextWeight"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="3"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="12dp"/>
 
                         <TextView
                             android:id="@+id/textViewKg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/kg" />
+                            android:text="@string/kg"
+                            android:layout_marginTop="12dp"/>
                     </TableRow>
                 </TableLayout>
             </TableRow>
@@ -196,18 +207,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" >
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editTextTargetWeight"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="3"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="12dp"/>
 
                         <TextView
                             android:id="@+id/textViewTargetKg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/kg" />
+                            android:text="@string/kg"
+                            android:layout_marginTop="12dp"/>
                     </TableRow>
                 </TableLayout>
             </TableRow>
@@ -227,7 +241,7 @@
                     android:layout_marginTop="12dp" />
 
                 <Button
-                    android:id="@+id/buttonBackSignUp"
+                    android:id="@+id/buttonBackProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/back" />

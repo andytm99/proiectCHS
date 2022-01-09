@@ -49,7 +49,7 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
                 break;
 
             case R.id.buttonProfileMenu:
-                //waiting for profile activity implementation
+                startActivity(new Intent(MainMenuActivity.this,ProfileUser.class));
                 break;
 
             case R.id.goalButtonMenu:
