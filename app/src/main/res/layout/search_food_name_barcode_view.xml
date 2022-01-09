@@ -125,13 +125,21 @@
                 android:text="Category:"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/editTextCategoryBarcode"
+            <Spinner
+                android:id="@+id/spinnerFoodCategoriesBarcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:ems="6" />
+                android:entries="@array/array_food_categories" />
+
+<!--            <EditText-->
+<!--                android:id="@+id/editTextCategoryBarcode"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:ems="6" />-->
 
         </TableRow>
 

@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,7 +29,8 @@ import java.util.TimeZone;
 public class SearchFoodNameActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView backButton;
     private Button addButton;
-    private EditText foodName,quantity,category;
+    private EditText foodName,quantity;
+    private Spinner category;
     protected Food food;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class SearchFoodNameActivity extends AppCompatActivity implements View.On
 
         foodName =(EditText)findViewById(R.id.editTextProductNameSearch);
         quantity=(EditText)findViewById(R.id.editTextQuantityName) ;
-        category=(EditText)findViewById(R.id.editTextCategoryName) ;
+        category=(Spinner)findViewById(R.id.spinnerFoodCategoriesName) ;
 
     }
 
@@ -67,7 +69,7 @@ public class SearchFoodNameActivity extends AppCompatActivity implements View.On
 
         String numeMancare=foodName.getText().toString().trim();
         String cantitate=quantity.getText().toString().trim();
-        String categorie=category.getText().toString().trim();
+        String categorie=category.getSelectedItem().toString().trim();
 
         if(numeMancare.isEmpty())
         {
@@ -82,12 +84,12 @@ public class SearchFoodNameActivity extends AppCompatActivity implements View.On
             return;
         }
 
-        if(categorie.isEmpty())
-        {
-            category.setError("Category is required!");
-            category.requestFocus();
-            return;
-        }
+//        if(categorie.isEmpty())
+//        {
+//            category.setError("Category is required!");
+//            category.requestFocus();
+//            return;
+//        }
 
         database=FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app");
         databaseReference=database.getReference().child("Foods");

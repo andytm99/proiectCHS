@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,7 +28,8 @@ import java.util.TimeZone;
 
 public class SearchFoodBarcodeActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView backButton,scanner;
-    private EditText barcode,quantity,category;
+    private EditText barcode,quantity;
+    private Spinner category;
     private Button addButton;
     protected Food food;
     FirebaseAuth auth;
@@ -48,7 +50,7 @@ public class SearchFoodBarcodeActivity extends AppCompatActivity implements View
 
         barcode =(EditText)findViewById(R.id.editTextBarcodeBarcode);
         quantity=(EditText)findViewById(R.id.editTextQuantityBarcode) ;
-        category=(EditText)findViewById(R.id.editTextCategoryBarcode) ;
+        category=(Spinner)findViewById(R.id.spinnerFoodCategoriesBarcode) ;
 
         String codBareSmech;
         Bundle bundle=getIntent().getExtras();
@@ -82,7 +84,7 @@ public class SearchFoodBarcodeActivity extends AppCompatActivity implements View
         FirebaseDatabase database;
         String codBare=barcode.getText().toString().trim();
         String cantitate=quantity.getText().toString().trim();
-        String categorie=category.getText().toString().trim();
+        String categorie=category.getSelectedItem().toString().trim();
         if(codBare.isEmpty())
         {
             barcode.setError("Barcode is required!");
@@ -96,12 +98,12 @@ public class SearchFoodBarcodeActivity extends AppCompatActivity implements View
             return;
         }
 
-        if(categorie.isEmpty())
-        {
-            category.setError("Category is required!");
-            category.requestFocus();
-            return;
-        }
+//        if(categorie.isEmpty())
+//        {
+//            category.setError("Category is required!");
+//            category.requestFocus();
+//            return;
+//        }
 
 
 

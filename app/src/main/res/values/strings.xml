@@ -75,6 +75,13 @@
         <item>Very heavy exercise (twice per day, extra heavy workouts)</item>
     </string-array>
 
+    <string-array name="array_food_categories">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snacks</item>
+    </string-array>
+
     <string name="i_want_to">I want to</string>
     <string name="i_want">I want</string>
     <string name="sign_up">Sign up</string>
