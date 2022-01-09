@@ -3,7 +3,7 @@ package com.example.stayfit;
 public class Food {
     private String foodName,brandName,calories,carbs,fats,proteins,barcode;
 
-    public Food()
+    public Food(String name, String calories)
     {
 
     }

@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class FoodActivity extends AppCompatActivity implements View.OnClickListener {
+public class  FoodActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView homeButton,addButton;
     private ListView foodListView;
     private ArrayList<Food> foodListViewArrayList=new ArrayList<>();
