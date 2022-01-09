@@ -28,7 +28,7 @@ public class ViewHistoryListAdapter extends ArrayAdapter<FoodDiary> {
         String name = getItem(position).getFoodName();
         String calories = getItem(position).getCalories();
 
-        Food food=new Food(name,calories);
+       // Food food=new Food(name,calories);
         LayoutInflater inflater =LayoutInflater.from(mContext);
         convertView=inflater.inflate(mResource,parent,false);
 
