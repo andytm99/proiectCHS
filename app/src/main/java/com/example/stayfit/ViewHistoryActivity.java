@@ -13,6 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,13 +43,6 @@ public class ViewHistoryActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.history_screen);
 
-        homeButton=(ImageView) findViewById(R.id.mainMenuButtonHistory);
-        homeButton.setOnClickListener(this);
-
-        foodHistoryListView=(ListView)findViewById(R.id.foodHistoryListView);
-        database=FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app");
-        databaseReference=database.getReference().child("DiaryFoods");
-
         Bundle extras = getIntent().getExtras();
         String date = extras.getString("date");
         String[] parts = date.split("/");
@@ -55,28 +50,37 @@ public class ViewHistoryActivity extends AppCompatActivity implements View.OnCli
         String month = parts[1];
         String year = parts[2];
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
+        homeButton=(ImageView) findViewById(R.id.mainMenuButtonHistory);
+        homeButton.setOnClickListener(this);
 
-                for(DataSnapshot ds:snapshot.getChildren()){
-                    food=ds.getValue(FoodDiary.class);
-                    if(food.getDay().equals(day) && food.getMonth().equals(month) && food.getYear().equals(year)) {
-                        foodHistoryListViewArrayList.add(food);
+        foodHistoryListView=(ListView)findViewById(R.id.foodHistoryListView);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null) {
+            String userEmail=user.getEmail();
+            database = FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app");
+            databaseReference = database.getReference().child("DiaryFoods");
+            databaseReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    for (DataSnapshot ds : snapshot.getChildren()) {
+                        food = ds.getValue(FoodDiary.class);
+                        if (food.getDay().equals(day) && food.getMonth().equals(month) && food.getYear().equals(year) && food.getEmail().equals(userEmail)) {
+                            foodHistoryListViewArrayList.add(food);
+                        }
                     }
+                    ViewHistoryListAdapter adapter = new ViewHistoryListAdapter(ViewHistoryActivity.this, R.layout.adapter_history_view, foodHistoryListViewArrayList);
+                    foodHistoryListView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+
                 }
-                ViewHistoryListAdapter adapter= new ViewHistoryListAdapter(ViewHistoryActivity.this,R.layout.adapter_history_view,foodHistoryListViewArrayList);
-                foodHistoryListView.setAdapter(adapter);
-                adapter.notifyDataSetChanged();
 
-            }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
+                }
+            });
+        }
     }
     @Override
     public void onClick(View v) {
