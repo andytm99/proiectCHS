@@ -77,6 +77,10 @@
             android:name=".CodeScannerDiaryActivity">
 
         </activity>
+        <activity
+            android:name=".ViewHistoryActivity">
+
+        </activity>
 
     </application>
 

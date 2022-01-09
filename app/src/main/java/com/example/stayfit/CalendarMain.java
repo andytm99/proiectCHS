@@ -10,6 +10,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -59,6 +60,14 @@ public class CalendarMain extends AppCompatActivity implements View.OnClickListe
                 mDateFormat.setText(date);
             }
         };
+
+        Button searchFoodHistory= findViewById(R.id.buttonSearchFoodHistory);
+        searchFoodHistory.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ViewHistoryActivity.class);
+
+            intent.putExtra("date", mDateFormat.getText().toString());
+            startActivity(intent);
+        });
    }
 
     @Override
@@ -69,5 +78,6 @@ public class CalendarMain extends AppCompatActivity implements View.OnClickListe
                 break;
 
         }
+
     }
 }
