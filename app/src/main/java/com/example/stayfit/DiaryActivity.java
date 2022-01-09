@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -60,6 +62,10 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
         dinnerLV=(ListView)findViewById(R.id.dinnerListView);
         snacksLV=(ListView)findViewById(R.id.snacksListView);
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (user != null) {
+            String userEmail=user.getEmail();
         database= FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app");
         databaseReference=database.getReference().child("DiaryFoods");
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -75,20 +81,20 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
                     String strMonth= String.valueOf(month);
                     String strYear=String.valueOf(year);
                     foodDiary=ds.getValue(FoodDiary.class);
-                    if((foodDiary.getCategory().equals("Breakfast"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear)))
+                    if((foodDiary.getCategory().equals("Breakfast"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))&&(foodDiary.getEmail().equals(userEmail)))
                     {
                         breakfastLVArrayList.add(foodDiary);
                     }
                     else
-                        if((foodDiary.getCategory().equals("Lunch"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))){
+                        if((foodDiary.getCategory().equals("Lunch"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))&&(foodDiary.getEmail().equals(userEmail))){
                             lunchLVArrayList.add(foodDiary);
                         }
                         else
-                            if((foodDiary.getCategory().equals("Dinner"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))){
+                            if((foodDiary.getCategory().equals("Dinner"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))&&(foodDiary.getEmail().equals(userEmail))){
                                 dinnerLVArrayList.add(foodDiary);
                             }
                             else
-                                if((foodDiary.getCategory().equals("Snacks"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))){
+                                if((foodDiary.getCategory().equals("Snacks"))&&(foodDiary.getDay().equals(strDay))&&(foodDiary.getMonth().equals(strMonth))&&(foodDiary.getYear().equals(strYear))&&(foodDiary.getEmail().equals(userEmail))){
                                     snacksLVArrayList.add(foodDiary);
                                 }
                 }
@@ -118,7 +124,7 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-
+                }
     }
 
     @Override
