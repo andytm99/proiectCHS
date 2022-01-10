@@ -60,6 +60,47 @@
 
             </com.google.android.material.appbar.AppBarLayout>
         </TableRow>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/textViewFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:text="Target:" />
+
+                <TextView
+                    android:id="@+id/editTextFoodTargetCaloriiHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:text="CaloriiTarget"/>
+
+                <TextView
+                    android:id="@+id/textViewSum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Sum:" />
+
+                <TextView
+                    android:id="@+id/editTextSumCaloriiHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:inputType="textEmailAddress"
+                    android:text="CaloriiSum"/>
+
+            </TableRow>
+        </TableLayout>
     </TableLayout>
 
         <TableLayout

@@ -28,13 +28,22 @@
         android:text="@string/logout"
         app:backgroundTint="#952B2B" />
 
+    <!--    <Button-->
+<!--        android:id="@+id/goalButtonMenu"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="339dp"-->
+<!--        android:text="@string/goal" />-->
+
     <Button
         android:id="@+id/homeButtonMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="298dp"
+        android:layout_marginBottom="436dp"
         android:text="Diary" />
 
     <Button
@@ -43,17 +52,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="401dp"
+        android:layout_marginBottom="380dp"
         android:text="@string/profile" />
-
-    <Button
-        android:id="@+id/goalButtonMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="339dp"
-        android:text="@string/goal" />
 
     <Button
         android:id="@+id/foodButtonMenu"
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="283dp"
+        android:layout_marginBottom="322dp"
         android:text="@string/food" />
 
     <Button
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="227dp"
+        android:layout_marginBottom="264dp"
         android:text="diary history" />
 
 </RelativeLayout>

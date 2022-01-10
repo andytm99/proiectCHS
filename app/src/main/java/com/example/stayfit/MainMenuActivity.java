@@ -26,8 +26,8 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
         profileButton=(Button)findViewById(R.id.buttonProfileMenu);
         profileButton.setOnClickListener(this);
 
-        goalButton=(Button)findViewById(R.id.goalButtonMenu);
-        goalButton.setOnClickListener(this);
+//        goalButton=(Button)findViewById(R.id.goalButtonMenu);
+//        goalButton.setOnClickListener(this);
 
         foodButton=(Button)findViewById(R.id.foodButtonMenu);
         foodButton.setOnClickListener(this);
@@ -52,9 +52,9 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(new Intent(MainMenuActivity.this,ProfileUser.class));
                 break;
 
-            case R.id.goalButtonMenu:
-                //waiting for goal activity implementation
-                break;
+//            case R.id.goalButtonMenu:
+//                //waiting for goal activity implementation
+//                break;
 
             case R.id.foodButtonMenu:
                 //waiting for food activity implementation

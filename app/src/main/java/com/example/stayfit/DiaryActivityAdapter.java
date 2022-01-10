@@ -40,13 +40,16 @@ public class DiaryActivityAdapter extends ArrayAdapter<FoodDiary> {
         String barcode=getItem(position).getBarcode();
         FoodDiary foodDiary=new FoodDiary(email,day,month,year,cantitate,foodName,category,brandName,calories,carbs,fats,proteins,barcode);
 
+        float fCalorii=Float.parseFloat(calories);
+        String strCalorii=String.valueOf((int)fCalorii);
+
         LayoutInflater inflater =LayoutInflater.from(mContext);
         convertView=inflater.inflate(mResource,parent,false);
         TextView tvName=(TextView)convertView.findViewById(R.id.diaryNameOfProduct);
         TextView tvCalories=(TextView)convertView.findViewById(R.id.diaryCaloriesOfProduct);
 
         tvName.setText(foodName);
-        tvCalories.setText(calories);
+        tvCalories.setText(strCalorii);
         return convertView;
     }
 }

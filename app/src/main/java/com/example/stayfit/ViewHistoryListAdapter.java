@@ -27,6 +27,8 @@ public class ViewHistoryListAdapter extends ArrayAdapter<FoodDiary> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         String name = getItem(position).getFoodName();
         String calories = getItem(position).getCalories();
+        float fCalorii=Float.parseFloat(calories);
+        String strCalorii=String.valueOf((int)fCalorii);
 
        // Food food=new Food(name,calories);
         LayoutInflater inflater =LayoutInflater.from(mContext);
@@ -36,7 +38,7 @@ public class ViewHistoryListAdapter extends ArrayAdapter<FoodDiary> {
         TextView tvCalories=(TextView) convertView.findViewById(R.id.caloriesFoodShowcase);
 
         tvName.setText(name);
-        tvCalories.setText(calories);
+        tvCalories.setText(strCalorii);
 
         return convertView;
     }
