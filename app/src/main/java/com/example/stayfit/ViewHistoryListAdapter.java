@@ -27,8 +27,21 @@ public class ViewHistoryListAdapter extends ArrayAdapter<FoodDiary> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         String name = getItem(position).getFoodName();
         String calories = getItem(position).getCalories();
+        String carbs=getItem(position).getCarbs();
+        String fats=getItem(position).getFats();
+        String proteins=getItem(position).getProteins();
+        String cantitate=getItem(position).getCantitate();
         float fCalorii=Float.parseFloat(calories);
         String strCalorii=String.valueOf((int)fCalorii);
+        float fCarbo=Float.parseFloat(carbs);
+        String strCarbo=String.valueOf((int)fCarbo);
+        float fGrasimi=Float.parseFloat(fats);
+        String strGrasimi=String.valueOf((int)fGrasimi);
+        float fProteine=Float.parseFloat(proteins);
+        String strProteine= String.valueOf((int)fProteine);
+        float fCantitate=Float.parseFloat(cantitate);
+        String strCantitate=String.valueOf((int)fCantitate);
+        String strMesaj="Calorii: "+strCalorii+"\n Carbs: "+strCarbo+" Fats: "+strGrasimi+" Proteins: "+strProteine+" Cantitate: "+strCantitate+"g";
 
        // Food food=new Food(name,calories);
         LayoutInflater inflater =LayoutInflater.from(mContext);
@@ -38,7 +51,7 @@ public class ViewHistoryListAdapter extends ArrayAdapter<FoodDiary> {
         TextView tvCalories=(TextView) convertView.findViewById(R.id.caloriesFoodShowcase);
 
         tvName.setText(name);
-        tvCalories.setText(strCalorii);
+        tvCalories.setText(strMesaj);
 
         return convertView;
     }

@@ -42,6 +42,15 @@ public class DiaryActivityAdapter extends ArrayAdapter<FoodDiary> {
 
         float fCalorii=Float.parseFloat(calories);
         String strCalorii=String.valueOf((int)fCalorii);
+        float fCarbo=Float.parseFloat(carbs);
+        String strCarbo=String.valueOf((int)fCarbo);
+        float fGrasimi=Float.parseFloat(fats);
+        String strGrasimi=String.valueOf((int)fGrasimi);
+        float fProteine=Float.parseFloat(proteins);
+        String strProteine= String.valueOf((int)fProteine);
+        float fCantitate=Float.parseFloat(cantitate);
+        String strCantitate=String.valueOf((int)fCantitate);
+        String strMesaj="Calorii: "+strCalorii+"\n Carbs: "+strCarbo+" Fats: "+strGrasimi+" Proteins: "+strProteine+" Cantitate: "+strCantitate+"g";
 
         LayoutInflater inflater =LayoutInflater.from(mContext);
         convertView=inflater.inflate(mResource,parent,false);
@@ -49,7 +58,7 @@ public class DiaryActivityAdapter extends ArrayAdapter<FoodDiary> {
         TextView tvCalories=(TextView)convertView.findViewById(R.id.diaryCaloriesOfProduct);
 
         tvName.setText(foodName);
-        tvCalories.setText(strCalorii);
+        tvCalories.setText(strMesaj);
         return convertView;
     }
 }
