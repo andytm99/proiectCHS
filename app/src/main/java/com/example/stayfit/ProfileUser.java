@@ -41,21 +41,26 @@ public class ProfileUser extends AppCompatActivity implements View.OnClickListen
         tv6=(TextView)findViewById(R.id.editTextWeight);
         tv7=(TextView)findViewById(R.id.editTextTargetWeight);
 
-        database = FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app");
-        databaseReference = database.getReference().child("Users");
+        FirebaseUser userConnected = FirebaseAuth.getInstance().getCurrentUser();
+        if(userConnected!=null) {
+            String userEmail=userConnected.getEmail();
+            database = FirebaseDatabase.getInstance("https://food-calorie-counter-a107a-default-rtdb.europe-west1.firebasedatabase.app");
+            databaseReference = database.getReference().child("Users");
 
             databaseReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    for(DataSnapshot ds:snapshot.getChildren()) {
+                    for (DataSnapshot ds : snapshot.getChildren()) {
                         user = ds.getValue(User.class);
-                        tv1.setText(user.getEmail());
-                        tv2.setText(user.getDay());
-                        tv3.setText(user.getMonth());
-                        tv4.setText(user.getYear());
-                        tv5.setText(user.getHeight());
-                        tv6.setText(user.getWeight());
-                        tv7.setText(user.getTargetWeight());
+                        if(user.getEmail().equals(userEmail)) {
+                            tv1.setText(user.getEmail());
+                            tv2.setText(user.getDay());
+                            tv3.setText(user.getMonth());
+                            tv4.setText(user.getYear());
+                            tv5.setText(user.getHeight());
+                            tv6.setText(user.getWeight());
+                            tv7.setText(user.getTargetWeight());
+                        }
                     }
                 }
 
@@ -64,6 +69,7 @@ public class ProfileUser extends AppCompatActivity implements View.OnClickListen
 
                 }
             });
+        }
     }
 
     @Override
