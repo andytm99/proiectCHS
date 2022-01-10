@@ -90,13 +90,13 @@
                     android:id="@+id/textViewIWantTo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/i_want_to" />
+                     />
 
                 <Spinner
                     android:id="@+id/spinnerWeeklyGoalA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:entries="@array/array_weekly_goals"/>
+                    />
 
             </TableRow>
 
@@ -109,13 +109,12 @@
                     android:id="@+id/textViewWeeklyGoalB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/weekly_goal" />
+                     />
 
                 <Spinner
                     android:id="@+id/spinnerWeeklyGoalB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:entries="@array/array_weekly_goals_kg"
                     />
 
                 <TextView

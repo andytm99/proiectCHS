@@ -1,95 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".MainActivity">-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="53dp"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_marginStart="0dp"-->
-<!--        android:layout_marginTop="0dp"-->
-<!--        android:layout_marginEnd="-3dp"-->
-<!--        android:layout_marginBottom="678dp"-->
-<!--        android:background="#673AB7"-->
-<!--        android:text="@string/profile_configuration"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textColor="#FFFFFF"-->
-<!--        android:textSize="30sp" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/editTextTextEmailAddress2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginStart="135dp"-->
-<!--        android:layout_marginTop="171dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textEmailAddress" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textView2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginStart="65dp"-->
-<!--        android:layout_marginTop="183dp"-->
-<!--        android:text="E-mail" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/editTextDate"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_marginTop="247dp"-->
-<!--        android:layout_marginEnd="65dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="date" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textView3"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginStart="45dp"-->
-<!--        android:layout_marginTop="261dp"-->
-<!--        android:text="Date of Birth" />-->
-
-<!--    <Switch-->
-<!--        android:id="@+id/switch1"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_marginStart="182dp" />-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_centerVertical="true"-->
-<!--        android:layout_marginStart="108dp"-->
-<!--        android:text="TextView" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textView5"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_centerVertical="true"-->
-<!--        android:layout_marginEnd="100dp"-->
-<!--        android:text="TextView" />-->
-
-<!--</RelativeLayout>-->
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -118,30 +27,7 @@
             android:src="@drawable/logo2" />
         <!-- //Logo -->
 
-        <!-- Error handling -->
-        <!--        <TableLayout-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="match_parent">-->
-        <!--            <TableRow-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent" >-->
-        <!--                <ImageView-->
-        <!--                    android:id="@+id/imageViewError"-->
-        <!--                    android:src="@drawable/dialog_error"-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    />-->
-        <!--                <TextView-->
-        <!--                    android:id="@+id/textViewErrorMessage"-->
-        <!--                    android:layout_width="match_parent"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:text="Error!"-->
-        <!--                    android:layout_marginTop="8dp"-->
-        <!--                    android:layout_marginLeft="8dp"-->
-        <!--                    />&lt;!&ndash; @string/blank &ndash;&gt;-->
-        <!--            </TableRow>-->
-        <!--        </TableLayout>-->
-        <!-- //Error handling -->
+
 
 
 
@@ -295,29 +181,7 @@
                     android:text="@string/blank" />
 
             </TableRow>
-            <!-- //Gender -->
 
-<!--            &lt;!&ndash; Mesurment &ndash;&gt;-->
-<!--            <TableRow-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginTop="12dp" >-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/textView8"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="@string/mesurment" />-->
-
-<!--                <Spinner-->
-<!--                    android:id="@+id/spinnerMesurment"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:entries="@array/array_mesurments" />-->
-
-
-<!--            </TableRow>-->
-<!--            &lt;!&ndash; //Mesurment &ndash;&gt;-->
 
             <!-- Height -->
             <TableRow
@@ -435,25 +299,25 @@
             <!-- //Weight -->
 
             <!-- Activity Level -->
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="12dp" >
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="12dp" >-->
 
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/activity_level"
-                    />
+<!--                <TextView-->
+<!--                    android:id="@+id/textView13"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/activity_level"-->
+<!--                    />-->
 
-                <Spinner
-                    android:id="@+id/spinnerActivityLevel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/array_activity_levels" />
+<!--                <Spinner-->
+<!--                    android:id="@+id/spinnerActivityLevel"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:entries="@array/array_activity_levels" />-->
 
-            </TableRow>
+<!--            </TableRow>-->
             <!-- //Activity Level -->
 
             <!-- Submit button -->
